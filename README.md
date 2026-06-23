@@ -8,71 +8,89 @@
 
 ---
 
-## Про переклад
+## Як це працює
 
-Перекладено елементи інтерфейсу клієнтського застосунку Zoom — кнопки, меню, підказки, повідомлення тощо. **Частина інтерфейсу залишається англійською** — це рядки, що формуються на серверах Zoom і не входять до локального файлу перекладу (наприклад, деякі сповіщення, вміст, що генерується AI, та окремі елементи веб-інтерфейсу).
+Zoom не має вбудованої підтримки украïнської мови у своєму клієнті для Linux, macOS і Windows — тому переклад реалізовано через заміну файлу **russian** перекладу (`ru.qm`) українським текстом. Після встановлення вам потрібно обрати в налаштуваннях Zoom мову **Русский** — саме тоді інтерфейс відображатиметься українською.
 
-Переклад виконано з використанням **Claude Haiku** як допоміжного інструменту та вичитано мною вручну. Попри це, помилки можливі. Якщо ви помітили неточність або маєте пропозиції — будь ласка, зв'яжіться зі мною: **github@grabovska.com**
-
-Оригінальні рядки інтерфейсу є власністю Zoom Video Communications, Inc. Я не претендую на жодні права щодо оригінального тексту.
+**Частина інтерфейсу залишається англійською** — це рядки, що формуються на серверах Zoom і не входять до локального файлу перекладу (наприклад, деякі системні сповіщення, вміст, що генерується AI, та окремі елементи веб-інтерфейсу).
 
 ---
 
 ## Встановлення
 
-> ⚠️ **Переклад не зберігається після оновлення Zoom.** Після кожного оновлення застосунку файл перекладу перезаписується, і його потрібно встановити знову.
-
-### Linux
-
-```bash
-sudo cp uk.qm /opt/zoom/translations/uk.qm
-```
-
-Або скористайтеся скриптом:
-
-```bash
-bash install.sh
-```
-
-Перезапустіть Zoom.
-
----
-
-### macOS
-
-```bash
-bash install.sh
-```
-
-Скрипт автоматично знайде потрібний файл усередині `/Applications/zoom.us.app` і замінить його. Перезапустіть Zoom.
-
----
+> ⚠️ **Переклад не зберігається після оновлення Zoom.** Після кожного оновлення застосунку файл перекладу перезаписується оригінальним russian перекладом, і його потрібно встановити знову.
 
 ### Windows
 
-Відкрийте PowerShell і виконайте:
+Завантажте і запустіть **[zoom-ua-installer.exe](zoom-ua-installer.exe)** — він автоматично знайде Zoom і встановить переклад. Після запуску перезапустіть Zoom.
+
+Якщо exe не спрацював, можна скористатися PowerShell-скриптом (для досвідчених користувачів):
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File install.ps1
 ```
 
-Або замініть файл вручну. Зазвичай він знаходиться за одним із таких шляхів:
+---
 
-```
-%APPDATA%\Zoom\bin\translations\uk.qm
-C:\Program Files\Zoom\bin\translations\uk.qm
+### Linux
+
+**Одна команда через curl:**
+
+```bash
+sudo curl -fsSL https://raw.githubusercontent.com/polymatheiia/zoom-ua/main/ru.qm \
+    -o /opt/zoom/translations/ru.qm
 ```
 
-Перезапустіть Zoom.
+Або клонуйте репозиторій і запустіть скрипт:
+
+```bash
+git clone https://github.com/polymatheiia/zoom-ua.git
+cd zoom-ua
+bash install.sh
+```
 
 ---
 
-## Повторне встановлення після оновлення
+### macOS
 
-Після кожного оновлення Zoom просто повторіть команду встановлення для вашої ОС. Файли перекладу в цьому репозиторії оновлюватимуться при виході нових версій Zoom.
+**Одна команда через curl:**
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/polymatheiia/zoom-ua/main/ru.qm \
+    -o "$(find /Applications/zoom.us.app -name ru.qm 2>/dev/null | head -1)"
+```
+
+Або клонуйте репозиторій і запустіть скрипт:
+
+```bash
+git clone https://github.com/polymatheiia/zoom-ua.git
+cd zoom-ua
+bash install.sh
+```
 
 ---
 
+## Після встановлення
+
+1. Перезапустіть Zoom
+2. Відкрийте **Налаштування → Загальне → Мова** і оберіть **Русский**
+3. Інтерфейс перемкнеться на українську
+
+---
+
+## Після оновлення Zoom
+
+Просто повторіть встановлення для вашої ОС — нічого більше не потрібно.
+
+---
+
+## Авторство та відповідальність
+
+Переклад виконано з використанням **Claude Haiku** як допоміжного інструменту та вичитано мною вручну. Попри це, помилки можливі — я людина. Якщо ви помітили неточність або маєте пропозиції, будь ласка, напишіть: **github@grabovska.com**
+
+Оригінальні рядки інтерфейсу є власністю Zoom Video Communications, Inc. Я не претендую на жодні права щодо оригінального тексту.
+
+---
 ---
 
 # Zoom — Unofficial Ukrainian UI Translation
@@ -83,73 +101,91 @@ This repository contains an **unofficial Ukrainian (uk\_UA) translation** of the
 
 ---
 
-## About
+## How it works
 
-The translation covers the local client UI — buttons, menus, tooltips, dialog messages, etc. **Some parts of the interface remain in English** because they are rendered server-side by Zoom and are not part of the local translation file (this includes certain notifications, AI-generated content, and some web-based UI elements).
+Zoom does not have built-in Ukrainian language support in its desktop client. The translation works by **replacing the russian translation file** (`ru.qm`) with Ukrainian text. After installation, set Zoom's display language to **Русский** — the interface will then appear in Ukrainian.
 
-The translation was produced with the assistance of **Claude Haiku** and proofread by me. As I am human, I may have missed something — if you spot an error or have a suggestion, please feel free to reach out: **github@grabovska.com**
-
-The original UI strings are the property of Zoom Video Communications, Inc. I make no claim over the original text.
+**Some parts of the interface remain in English** — these are strings generated server-side by Zoom and not included in the local translation file (certain system notifications, AI-generated content, and some web-based UI elements).
 
 ---
 
 ## Installation
 
-> ⚠️ **The translation does not survive Zoom updates.** Each Zoom upgrade overwrites the translation file, so you will need to reinstall it after every update.
-
-### Linux
-
-```bash
-sudo cp uk.qm /opt/zoom/translations/uk.qm
-```
-
-Or use the included script:
-
-```bash
-bash install.sh
-```
-
-Restart Zoom.
-
----
-
-### macOS
-
-```bash
-bash install.sh
-```
-
-The script will automatically locate `uk.qm` inside `/Applications/zoom.us.app` and replace it. Restart Zoom.
-
----
+> ⚠️ **The translation does not survive Zoom updates.** Each Zoom upgrade overwrites the translation file with the original russian translation. Reinstall after every update.
 
 ### Windows
 
-Open PowerShell and run:
+Download and run **[zoom-ua-installer.exe](zoom-ua-installer.exe)** — it will automatically find Zoom and install the translation. Restart Zoom afterwards.
+
+If the exe doesn't work, use the PowerShell script (for advanced users):
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File install.ps1
 ```
 
-Or replace the file manually. It is typically found at one of:
+---
 
-```
-%APPDATA%\Zoom\bin\translations\uk.qm
-C:\Program Files\Zoom\bin\translations\uk.qm
+### Linux
+
+**One-liner with curl:**
+
+```bash
+sudo curl -fsSL https://raw.githubusercontent.com/polymatheiia/zoom-ua/main/ru.qm \
+    -o /opt/zoom/translations/ru.qm
 ```
 
-Restart Zoom.
+Or clone the repo and run the script:
+
+```bash
+git clone https://github.com/polymatheiia/zoom-ua.git
+cd zoom-ua
+bash install.sh
+```
 
 ---
 
-## Reinstalling after a Zoom update
+### macOS
 
-After each Zoom update, simply re-run the install command for your OS. Translation files in this repository will be updated as new Zoom versions are released.
+**One-liner with curl:**
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/polymatheiia/zoom-ua/main/ru.qm \
+    -o "$(find /Applications/zoom.us.app -name ru.qm 2>/dev/null | head -1)"
+```
+
+Or clone the repo and run the script:
+
+```bash
+git clone https://github.com/polymatheiia/zoom-ua.git
+cd zoom-ua
+bash install.sh
+```
+
+---
+
+## After installation
+
+1. Restart Zoom
+2. Go to **Settings → General → Language** and select **Русский**
+3. The interface will switch to Ukrainian
+
+---
+
+## After a Zoom update
+
+Simply repeat the installation step for your OS — that's all.
+
+---
+
+## Credits and disclaimer
+
+The translation was produced with the assistance of **Claude Haiku** and proofread by me. As I am human, I may have missed something. If you spot an error or have a suggestion, please reach out: **github@grabovska.com**
+
+The original UI strings are the property of Zoom Video Communications, Inc. I make no claim over the original text.
 
 ---
 
 ## License
 
-Installation scripts: [MIT](https://opensource.org/licenses/MIT)
-
+Installer and scripts: [MIT](https://opensource.org/licenses/MIT)  
 Original Zoom UI strings © Zoom Video Communications, Inc. All rights reserved.

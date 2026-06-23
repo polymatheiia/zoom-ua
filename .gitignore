@@ -2,6 +2,7 @@ venv/
 .claude/
 *.log
 zoom_uk_merged.ts
+installer/ru.qm
 .translate_progress.json
 .translate_new_progress.json
 .review_progress.json

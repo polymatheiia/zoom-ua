@@ -1,11 +1,12 @@
 # Installs the Ukrainian translation for Zoom (Windows).
-# Run from the directory containing uk.qm:
+# Alternative to zoom-ua-installer.exe for advanced users.
+# Run from the directory containing ru.qm:
 #   powershell -ExecutionPolicy Bypass -File install.ps1
 
 $ErrorActionPreference = "Stop"
 
-if (-not (Test-Path "uk.qm")) {
-    Write-Error "uk.qm not found. Run this script from the repository root."
+if (-not (Test-Path "ru.qm")) {
+    Write-Error "ru.qm not found. Run this script from the repository root."
     exit 1
 }
 
@@ -17,25 +18,24 @@ $candidates = @(
 
 $dest = $null
 foreach ($path in $candidates) {
-    if (Test-Path "$path\uk.qm") {
-        $dest = "$path\uk.qm"
+    if (Test-Path "$path\ru.qm") {
+        $dest = "$path\ru.qm"
         break
     }
 }
 
 if (-not $dest) {
-    # Broader search as fallback
     $found = Get-ChildItem -Path "$env:APPDATA\Zoom", "$env:ProgramFiles\Zoom" `
-        -Filter "uk.qm" -Recurse -ErrorAction SilentlyContinue |
+        -Filter "ru.qm" -Recurse -ErrorAction SilentlyContinue |
         Select-Object -First 1
     if ($found) { $dest = $found.FullName }
 }
 
 if (-not $dest) {
-    Write-Error "Could not find Zoom's uk.qm file. Is Zoom installed?"
+    Write-Error "Could not find Zoom's ru.qm file. Is Zoom installed?"
     exit 1
 }
 
-Copy-Item -Path "uk.qm" -Destination $dest -Force
+Copy-Item -Path "ru.qm" -Destination $dest -Force
 Write-Host "Installed to $dest"
-Write-Host "Restart Zoom for the changes to take effect."
+Write-Host "Restart Zoom and set language: Settings -> General -> Language -> Русский"
