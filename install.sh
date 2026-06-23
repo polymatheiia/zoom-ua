@@ -31,5 +31,4 @@ case "$OSTYPE" in
         ;;
 esac
 
-echo "Done. Restart Zoom for the changes to take effect."
-echo "Set language: Settings → General → Language → Русский"
+echo "Done. Restart Zoom, then right-click its tray/dock icon → Switch Languages → Русский"

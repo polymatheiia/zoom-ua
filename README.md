@@ -72,9 +72,22 @@ bash install.sh
 
 ## Після встановлення
 
-1. Перезапустіть Zoom
-2. Відкрийте **Налаштування → Загальне → Мова** і оберіть **Русский**
-3. Інтерфейс перемкнеться на українську
+Перезапустіть Zoom, потім змініть мову інтерфейсу:
+
+**Windows:**
+1. Клацніть правою кнопкою на іконці Zoom у системному треї (правий нижній кут екрана)
+2. Наведіть на **Switch Languages**
+3. Оберіть **Русский** — Zoom перезапуститься українською
+
+**macOS:**
+1. Клацніть правою кнопкою (або option+клік) на іконці Zoom у Dock
+2. Наведіть на **Switch Languages**
+3. Оберіть **Русский** — Zoom перезапуститься українською
+
+**Linux:**
+1. Клацніть правою кнопкою на іконці Zoom у верхньому правому куті екрана активностей
+2. Натисніть **Switch Languages**
+3. Оберіть **Русский** — Zoom перезапуститься українською
 
 ---
 
@@ -165,9 +178,22 @@ bash install.sh
 
 ## After installation
 
-1. Restart Zoom
-2. Go to **Settings → General → Language** and select **Русский**
-3. The interface will switch to Ukrainian
+Restart Zoom, then switch the display language:
+
+**Windows:**
+1. Right-click the Zoom icon in the system tray (bottom-right corner)
+2. Hover over **Switch Languages**
+3. Select **Русский** — Zoom will restart in Ukrainian
+
+**macOS:**
+1. Right-click (or option-click) the Zoom icon in the Dock
+2. Hover over **Switch Languages**
+3. Select **Русский** — Zoom will restart in Ukrainian
+
+**Linux:**
+1. Right-click the Zoom icon in the top-right corner of the Activities screen
+2. Click **Switch Languages**
+3. Select **Русский** — Zoom will restart in Ukrainian
 
 ---
 

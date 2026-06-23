@@ -33,9 +33,9 @@ func main() {
 		"✓ Переклад встановлено успішно!\n"+
 			"✓ Translation installed successfully!\n\n"+
 			dest+"\n\n"+
-			"Перезапустіть Zoom і оберіть мову:\n"+
-			"Restart Zoom and set language:\n"+
-			"Settings → General → Language → Русский",
+			"Перезапустіть Zoom, потім:\n"+
+			"Restart Zoom, then:\n"+
+			"Right-click tray icon → Switch Languages → Русский",
 		false)
 }
 

@@ -38,4 +38,4 @@ if (-not $dest) {
 
 Copy-Item -Path "ru.qm" -Destination $dest -Force
 Write-Host "Installed to $dest"
-Write-Host "Restart Zoom and set language: Settings -> General -> Language -> Русский"
+Write-Host "Restart Zoom, then right-click its tray icon -> Switch Languages -> Русский"
