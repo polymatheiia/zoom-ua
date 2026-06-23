@@ -7,18 +7,22 @@
 **Актуально для версії:** Zoom 7.1.0 (3715)
 
 ---
+## Присвята
+Переклад виконано для моєї мами, яка не розуміє англійської, а інтерфейсом мовою країни-ворога неприємно користуватись з очевидних причин. 
+
+---
 
 ## Як це працює
 
-Zoom не має вбудованої підтримки украïнської мови у своєму клієнті для Linux, macOS і Windows — тому переклад реалізовано через заміну файлу **russian** перекладу (`ru.qm`) українським текстом. Після встановлення вам потрібно обрати в налаштуваннях Zoom мову **Русский** — саме тоді інтерфейс відображатиметься українською.
+Zoom не має вбудованої підтримки украïнської мови у своєму клієнті для Linux, macOS і Windows — тому переклад реалізовано через заміну файлу російського перекладу (`ru.qm`) українським текстом. Після встановлення вам потрібно обрати в налаштуваннях Zoom мову **русский** — саме тоді інтерфейс відображатиметься **українською**.
 
-**Частина інтерфейсу залишається англійською** — це рядки, що формуються на серверах Zoom і не входять до локального файлу перекладу (наприклад, деякі системні сповіщення, вміст, що генерується AI, та окремі елементи веб-інтерфейсу).
+**Частина інтерфейсу залишається англійською або російською** — це рядки, що формуються на серверах Zoom і не входять до локального файлу перекладу (наприклад, деякі системні сповіщення, вміст, що генерується AI, та окремі елементи веб-інтерфейсу).
 
 ---
 
 ## Встановлення
 
-> ⚠️ **Переклад не зберігається після оновлення Zoom.** Після кожного оновлення застосунку файл перекладу перезаписується оригінальним russian перекладом, і його потрібно встановити знову.
+> ⚠️ **Переклад не зберігається після оновлення Zoom.** Після кожного оновлення застосунку файл перекладу перезаписується оригінальним російським перекладом, і його потрібно встановити знову.
 
 ### Windows
 
@@ -77,17 +81,17 @@ bash install.sh
 **Windows:**
 1. Клацніть правою кнопкою на іконці Zoom у системному треї (правий нижній кут екрана)
 2. Наведіть на **Switch Languages**
-3. Оберіть **Русский** — Zoom перезапуститься українською
+3. Оберіть **русский** — Zoom перезапуститься українською
 
 **macOS:**
 1. Клацніть правою кнопкою (або option+клік) на іконці Zoom у Dock
 2. Наведіть на **Switch Languages**
-3. Оберіть **Русский** — Zoom перезапуститься українською
+3. Оберіть **русский** — Zoom перезапуститься українською
 
 **Linux:**
 1. Клацніть правою кнопкою на іконці Zoom у верхньому правому куті екрана активностей
 2. Натисніть **Switch Languages**
-3. Оберіть **Русский** — Zoom перезапуститься українською
+3. Оберіть **русский** — Zoom перезапуститься українською
 
 ---
 
@@ -99,7 +103,7 @@ bash install.sh
 
 ## Авторство та відповідальність
 
-Переклад виконано з використанням **Claude Haiku** як допоміжного інструменту та вичитано мною вручну. Попри це, помилки можливі — я людина. Якщо ви помітили неточність або маєте пропозиції, будь ласка, напишіть: **github@grabovska.com**
+Переклад виконано з використанням **Claude Haiku** як допоміжного інструменту та вичитано мною вручну. Попри це, помилки можливі — я всього лиш людина, а тексту там таки багато. Якщо ви помітили неточність або маєте пропозиції, будь ласка, напишіть мені: **github@grabovska.com**
 
 Оригінальні рядки інтерфейсу є власністю Zoom Video Communications, Inc. Я не претендую на жодні права щодо оригінального тексту.
 
@@ -183,17 +187,17 @@ Restart Zoom, then switch the display language:
 **Windows:**
 1. Right-click the Zoom icon in the system tray (bottom-right corner)
 2. Hover over **Switch Languages**
-3. Select **Русский** — Zoom will restart in Ukrainian
+3. Select **русский** — Zoom will restart in Ukrainian
 
 **macOS:**
 1. Right-click (or option-click) the Zoom icon in the Dock
 2. Hover over **Switch Languages**
-3. Select **Русский** — Zoom will restart in Ukrainian
+3. Select **русский** — Zoom will restart in Ukrainian
 
 **Linux:**
 1. Right-click the Zoom icon in the top-right corner of the Activities screen
 2. Click **Switch Languages**
-3. Select **Русский** — Zoom will restart in Ukrainian
+3. Select **русский** — Zoom will restart in Ukrainian
 
 ---
 
@@ -205,7 +209,7 @@ Simply repeat the installation step for your OS — that's all.
 
 ## Credits and disclaimer
 
-The translation was produced with the assistance of **Claude Haiku** and proofread by me. As I am human, I may have missed something. If you spot an error or have a suggestion, please reach out: **github@grabovska.com**
+The translation was produced with the assistance of **Claude Haiku** and proofread by me. As I am just a mere human, I may have missed something. If you spot an error or have a suggestion, please reach out: **github@grabovska.com**
 
 The original UI strings are the property of Zoom Video Communications, Inc. I make no claim over the original text.
 
