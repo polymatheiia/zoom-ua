@@ -22,7 +22,7 @@ Zoom не має вбудованої підтримки украïнської 
 
 ### Windows
 
-Завантажте і запустіть **[zoom-ua-installer.exe](zoom-ua-installer.exe)** — він автоматично знайде Zoom і встановить переклад. Після запуску перезапустіть Zoom.
+Завантажте і запустіть **[zoom-ua-installer.exe](https://github.com/polymatheiia/zoom-ua/raw/main/zoom-ua-installer.exe)** — він автоматично знайде Zoom і встановить переклад. Після запуску перезапустіть Zoom.
 
 Якщо exe не спрацював, можна скористатися PowerShell-скриптом (для досвідчених користувачів):
 
@@ -115,7 +115,7 @@ Zoom does not have built-in Ukrainian language support in its desktop client. Th
 
 ### Windows
 
-Download and run **[zoom-ua-installer.exe](zoom-ua-installer.exe)** — it will automatically find Zoom and install the translation. Restart Zoom afterwards.
+Download and run **[zoom-ua-installer.exe](https://github.com/polymatheiia/zoom-ua/raw/main/zoom-ua-installer.exe)** — it will automatically find Zoom and install the translation. Restart Zoom afterwards.
 
 If the exe doesn't work, use the PowerShell script (for advanced users):
 
