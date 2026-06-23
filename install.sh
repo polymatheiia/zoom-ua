@@ -17,9 +17,22 @@ case "$OSTYPE" in
         sudo cp ru.qm "$DEST"
         ;;
     darwin*)
-        DEST=$(find /Applications/zoom.us.app -name "ru.qm" 2>/dev/null | head -1)
+        DEST=$(find \
+            /Applications/zoom.us.app \
+            ~/Applications/zoom.us.app \
+            ~/Library/Application\ Support/zoom.us \
+            -name "ru.qm" 2>/dev/null | head -1)
         if [[ -z "$DEST" ]]; then
-            echo "Error: Could not find ru.qm inside Zoom.app. Is Zoom installed in /Applications?"
+            echo "Error: Could not find ru.qm in any known Zoom location."
+            echo ""
+            echo "Diagnostic — all .qm files found in Zoom directories:"
+            find /Applications/zoom.us.app ~/Applications/zoom.us.app \
+                 ~/Library/Application\ Support/zoom.us \
+                 -name "*.qm" 2>/dev/null || true
+            echo ""
+            echo "Please share the output above at:"
+            echo "  https://github.com/polymatheiia/zoom-ua/issues"
+            echo "  or github@grabovska.com"
             exit 1
         fi
         echo "Installing to $DEST..."

@@ -57,20 +57,13 @@ bash install.sh
 
 ### macOS
 
-**Одна команда через curl:**
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/polymatheiia/zoom-ua/main/ru.qm \
-    -o "$(find /Applications/zoom.us.app -name ru.qm 2>/dev/null | head -1)"
-```
-
-Або клонуйте репозиторій і запустіть скрипт:
-
 ```bash
 git clone https://github.com/polymatheiia/zoom-ua.git
 cd zoom-ua
 bash install.sh
 ```
+
+> ⚠️ **macOS:** якщо скрипт повідомляє про помилку, він автоматично виведе список `.qm`-файлів, знайдених у директоріях Zoom. Надішліть цей список на **github@grabovska.com** або відкрийте [issue](https://github.com/polymatheiia/zoom-ua/issues) — де саме macOS-версія Zoom зберігає файли перекладу, ще уточнюється.
 
 ---
 
@@ -163,20 +156,13 @@ bash install.sh
 
 ### macOS
 
-**One-liner with curl:**
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/polymatheiia/zoom-ua/main/ru.qm \
-    -o "$(find /Applications/zoom.us.app -name ru.qm 2>/dev/null | head -1)"
-```
-
-Or clone the repo and run the script:
-
 ```bash
 git clone https://github.com/polymatheiia/zoom-ua.git
 cd zoom-ua
 bash install.sh
 ```
+
+> ⚠️ **macOS:** if the script reports an error, it will automatically list all `.qm` files found in Zoom's directories. Please share that output at **github@grabovska.com** or open an [issue](https://github.com/polymatheiia/zoom-ua/issues) — the exact location of translation files in the macOS Zoom client is still being determined.
 
 ---
 
